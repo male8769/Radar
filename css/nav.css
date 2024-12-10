@@ -4,3 +4,65 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: #052049; /* mørkeblå */
+    --secondary-color: #FF99CF; /* lysserød */
+    --accent-color: #633B90; /* lilla */
+    --text-color: #FF99CF; /* lysserød */
+}
+
+nav{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.logo img {
+    
+    width: 150px;
+    padding: 5px;
+  }
+
+/* links farver og decor */
+  nav a{
+    text-decoration: none;
+    color: var(--text-color);
+  }
+
+  nav a:hover {
+    color: #e377b1;
+  }
+
+  /* styling af links */
+  .nav-links {
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+  }
+
+  .nav-links li {
+    margin: 0 18px;
+  }
+
+  .nav-links a {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  /* burger menu */
+  .menu-checkbox {
+    display: none;
+  }
+  
+  .menu-icon {
+    display: none;
+  }
+  
