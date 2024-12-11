@@ -13,3 +13,117 @@
 
 
 
+
+/* Bekræft-knap centring */
+.bekræft {
+    display: flex;
+    justify-content: center; /* Centrerer knappen */
+    margin-top: 20px;
+}
+
+.bekræft-knap {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.bekræft-knap:hover {
+    background-color: #fd67b7;
+    color: #013685;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+
+/* medlemsfordele */
+
+.medlems-fordele{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+}
+
+.fordele {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+}
+
+.fordele h1 {
+padding-top: 50px;
+font-size: 2em;
+}
+
+.fordele h3 {
+    font-size: 1.5em;
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+
+.fordele ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 50px;
+}
+
+.fordele li {
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-top: 10px;
+    line-height: 1.6;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--secondary-color);
+    width: 100%;
+    text-align: center;
+}
+
+.fordele li strong {
+    color: #ff62b6;
+}
+.fordele li:hover {
+    background-color: #013685;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.fordele p {
+    padding-top: 20px;
+    font-size: var(--body-font-size);
+    margin-bottom: 20px;
+    line-height: 1.6;
+    max-width: 700px; /* Begrænset bredde */
+    margin-left: auto; /* Centrerer teksten */
+    margin-right: auto; /* Centrerer teksten */
+    text-align: center;
+}
+
+/* Responsivt design */
+@media (max-width: 768px) {
+    .fordele {
+        padding: 10px;
+    }
+
+    .fordele h1 {
+        font-size: 1.8em;
+    }
+
+    .fordele h3 {
+        font-size: 1.3em;
+    }
+
+    .fordele li {
+        font-size: 0.9em;
+    }
+}
+
+
+
