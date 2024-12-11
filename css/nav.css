@@ -9,8 +9,10 @@
     --secondary-color: #FF99CF; /* lysserød */
     --accent-color: #633B90; /* lilla */
     --text-color: #FF99CF; /* lysserød */
+    --hovor-color:#e377b1; /* mørk lysserød */
 }
 
+/* generel styling for navbaren */
 nav{
     background-color: var(--primary-color);
     color: var(--text-color);
@@ -24,6 +26,8 @@ nav{
     padding-right: 70px;
 }
 
+/* logo */
+
 .logo img {
     
     width: 150px;
@@ -31,16 +35,23 @@ nav{
   }
 
 /* links farver og decor */
+
   nav a{
     text-decoration: none;
     color: var(--text-color);
   }
 
   nav a:hover {
-    color: #e377b1;
+    color: var(--hovor-color);
+  }
+
+  nav a:focus {
+    outline-color:var(--hovor-color);
+    color: var(--hovor-color);
   }
 
   /* styling af links */
+
   .nav-links {
     display: flex;
     list-style: none;
@@ -59,12 +70,44 @@ nav{
     font-weight: bold;
   }
 
+  nav a {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
   /* burger menu */
   .menu-checkbox {
     display: none;
   }
-  
-  .menu-icon {
+
+   .menu-icon {
     display: none;
   }
+
+  .menu-icon:hover.{
+    color: var(--hovor-color);
+  }
   
+  /* responsiv */
+
+  @media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: var(--primary-color);
+        width: 100%;
+    }
+
+    .menu-checkbox:checked ~ .nav-links {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+    }
+}
