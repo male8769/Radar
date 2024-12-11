@@ -78,6 +78,6 @@ hr {
     border: none;
     border-bottom: 4px dotted var(--secondary-color);
     margin: 20px auto;
-    width: 60%;
-    padding-top: 3%;
+    width: 65%;
+    padding-top: 0;
 }
