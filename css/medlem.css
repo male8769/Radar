@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #052049; /* mørkeblå */
+    --secondary-color: #FF99CF; /* lysserød */
+    --accent-color: #633B90; /* lilla */
+    --text-color: #FF99CF; /* lysserød */
+    --hovor-color:#e377b1; /* mørk lysserød */
+    --pxfoto-color:#050f1f;/* mørk blå til 1px rundt om billeder */
+}
+
+/* bliv medlem form */
+main {
+    background-color: var(--secondary-color);
+    padding: 40px;
+}
+
+.medlemskabs-formular {
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.form {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* header styling */
+.header {
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px 0;
+}
+
+.header h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.header p {
+    font-size: 1.2em;
+    font-weight: bold;
+
+}
+
+
+/* fieldset styling */
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 0;
+}
+
+
+.form-sektion {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+/* Ensartet størrelse for inputfelter */
+fieldset input, 
+fieldset select {
+    width: 100%; /* Sørger for at felterne fylder hele containerens bredde */
+    max-width: 400px; /* Begrænser bredden for at sikre et ensartet udseende */
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    font-size: 1em;
+    color: var(--primary-color);
+    font-weight: bold;
+    background-color: var(--secondary-color);
+    box-sizing: border-box; /* Sikrer, at padding ikke øger feltets totale bredde */
+}
+
+fieldset input::placeholder, 
+fieldset select::placeholder {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* legend styling */
+legend {
+    font-family: Arial, sans-serif;
+    color: var(--secondary-color);
+    font-weight: bold;
+    text-align: center; /* Centrerer legend */
+    margin-bottom: 10px; /* Giver lidt afstand mellem legend og inputfelterne */
+}
+
+/* bekræft af betingelserne */
+fieldset label {
+    font-family: Arial, sans-serif;
+    color: var(--text-color); 
+    font-weight: bold;
+}
+
+fieldset a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+fieldset a:hover {
+    text-decoration: underline;
+}
+
+/* checkbox styling */
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    /* border: 2px solid var(--secondary-color); */
+    background-color: var(--secondary-color);
+    position: relative;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background-color: var(--secondary-color); 
+    border-color: var(--secondary-color); 
+}
+
+input[type="checkbox"]:checked::after {
+    content: '✔'; 
+    color: var(--primary-color); 
+    font-size: 16px; /* Størrelse på checkmærket */
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+}
+
+/* Bekræft-knap centring */
+.bekræft {
+    display: flex;
+    justify-content: center; /* Centrerer knappen */
+    margin-top: 20px;
+}
+
+.bekræft-knap {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.bekræft-knap:hover {
+    background-color: #fd67b7;
+    color: #013685;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}

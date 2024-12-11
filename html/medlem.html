@@ -8,6 +8,7 @@
     <link rel="icon" href="../img/logo/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/medlem.css">
     
 </head>
 <body>
@@ -28,6 +29,64 @@
         <li><a href="medlem.html" title="Bliv medlem">Medlemskab</a></li>
     </ul>
 </nav>
+
+<!-- bliv medlem form -->
+
+<main>
+  <section class="medlemskabs-formular">
+    <header class="header">
+        <h2>Bliv Medlem</h2>
+        <p>Vælg dit medlemskab og indtast dine betalingsoplysninger for at blive medlem.</p>
+    </header>
+
+    <article class="form">
+        <form action="/submit-membership" method="POST">
+          <section class="form-sektion">
+            <!-- Personlige oplysninger -->
+            <fieldset>
+              <legend>Personlige oplysninger</legend>
+                <input type="text" id="fuld-navn" name="fuld-navn" placeholder="Fulde navn" required>
+                <input type="email" id="email" name="email" placeholder="E-mail" required>
+                <input type="tel" id="telefon" name="telefon" placeholder="Telefonnummer">
+            </fieldset>
+
+            <!-- Medlemskabsniveau -->
+            <fieldset>
+              <legend>Vælg medlemskabsniveau</legend>
+                <select id="medlemskab-niveau" name="medlemskab-niveau" required>
+                    <option value="basic">Basismedlemskab - 100 kr./måned</option>
+                    <option value="premium">Premium Medlemskab - 200 kr./måned</option>
+                    <option value="vip">VIP Medlemskab - 300 kr./måned</option>
+                </select>
+            </fieldset>
+
+            <!-- Betalingsoplysninger -->
+            <fieldset>
+              <legend>Betalingsoplysninger</legend>
+                <input type="text" id="kreditkort-nummer" name="kreditkort-nummer" placeholder="Kreditkortnummer" required>
+                <input type="month" id="udløbs-dato" name="udløbs-dato" placeholder="Udløbsdato" required>
+                <input type="text" id="cvv" name="cvv" placeholder="CVV" required>
+            </fieldset>
+          </section>
+
+            <!-- Samtykke og betingelser -->
+            <fieldset>
+                <label for="betingelser">
+                    <input type="checkbox" id="betingelser" name="betingelser" required>
+                    Jeg accepterer <a href="/terms">betingelserne</a>
+                </label>
+            </fieldset>
+
+            <!-- Bekræftelsesknap -->
+            <section class="bekræft">
+              <button type="submit" class="bekræft-knap">Bliv Medlem</button>
+          </section>
+        </form>
+    </article>
+  </section>
+</main>
+
+
     
 
 
