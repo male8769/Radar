@@ -22,7 +22,7 @@
     padding: 70px; /* Ingen padding rundt om containeren */
     gap: 70px; /* Ingen mellemrum mellem billederne */
     background-color: var(--secondary-color);
-    padding-right: 0;
+    padding-bottom: 20px;
 }
 
 .banner-img {
@@ -30,10 +30,52 @@
 }
 
 .banner-img img {
-    width: 80%; /* Sørger for, at billederne fylder hele figurens bredde */
+    width: 100%; /* Sørger for, at billederne fylder hele figurens bredde */
     height: auto; /* Bevarer billedets proportioner */
    
     border: 1px solid #e377b1; /* Mørkeblå ramme */
        
     background-color: #1a1a1a; /* Mørk baggrundsfarve til at fremhæve rammen */
+}
+
+
+
+/* bliv medlem knap */
+
+/* Container for knappen og linjer */
+.medlemskab {
+    display: flex; /* Flexbox til horisontal layout */
+    align-items: center; /* Vertikal centreret layout */
+    justify-content: center; /* Centrerer hele sektionen */
+    background-color: var(--secondary-color); /* Baggrundsfarve (lyserød) */
+    padding: 20px 0; /* Plads over og under */
+}
+
+/* Hr styling */
+.line {
+    border: none; 
+    border-top: 4px dotted var(--primary-color); /* Stiplet linje */
+    margin: 0 10px; /* Plads mellem linjerne og knappen */
+    width: 25%; /* Procentuel bredde */
+    flex-shrink: 0; /* Sørger for, at linjerne ikke krymper */
+    padding-top: 0;
+}
+
+/* Knappens styling */
+.bliv-medlem {
+    background-color: var(--primary-color); /* Mørkeblå baggrundsfarve */
+    color: var(--secondary-color); 
+    font-size: 16px; /* Tekststørrelse */
+    font-weight: bold; /* Fed tekst */
+    padding: 10px 20px; /* Indvendig afstand for knappen */
+    border: none; /* Fjern standardkant */
+    border-radius: 15px; /* Afrundede hjørner */
+    cursor: pointer; /* Gør knappen klikbar */
+    display: inline-block; /* Gør knappen inline-block for bedre fleksibilitet */
+}
+
+.bliv-medlem:hover {
+    background-color: #ff60b5; /* Skift farve ved hover */
+    color: #052049; /* Omvend farve ved hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Glidende overgang */
 }
