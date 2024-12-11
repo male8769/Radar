@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #052049; /* mørkeblå */
+    --secondary-color: #FF99CF; /* lysserød */
+    --accent-color: #633B90; /* lilla */
+    --text-color: #FF99CF; /* lysserød */
+    --hovor-color:#e377b1; /* mørk lysserød */
+    --pxfoto-color:#050f1f;/* mørk blå til 1px rundt om billeder */
+}
+
+.img-banner {
+    display: flex; /* Gør containeren til en flexbox */
+    justify-content: center; /* Centrerer billederne */
+    align-items: center; /* Centrerer billederne lodret */
+    padding: 0; /* Ingen padding rundt om containeren */
+    gap: 0; /* Ingen mellemrum mellem billederne */
+}
+
+.banner-img {
+    flex: 1; /* Gør hver figur lige bred */
+    margin: 0; /* Ingen margin mellem figurerne */
+}
+
+.banner-img img {
+    width: 100%; /* Sørger for, at billederne fylder hele figurens bredde */
+    height: auto; /* Bevarer billedets proportioner */
+    display: block; /* Eliminerer evt. mellemrum som inline-elementer kan skabe */
+    border: 1px solid var(--pxfoto-color); /* Mørkeblå ramme */
+       
+    background-color: #1a1a1a; /* Mørk baggrundsfarve til at fremhæve rammen */
+}
