@@ -76,3 +76,37 @@
     color: #052049; /* Omvend farve ved hover */
     transition: background-color 0.3s ease, color 0.3s ease; /* Glidende overgang */
 }
+
+
+
+
+
+
+
+
+
+/* billeder af koncerter/tegninger */
+
+.koncerter {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tre kolonner */
+    gap: 40px; /* Mellemrum mellem billeder */
+    background-color: var(--accent-color); /* Mørk blå baggrund */
+    padding: 40px; /* Indre margin omkring hele sektionen */
+    border: 40px solid var(--primary-color); /* Ramme omkring sektionen */
+  }
+  
+  .koncert-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .koncert-img img {
+    max-width: 100%; 
+    height: auto;
+    border: 1px solid var(--pxfoto-color);
+    border-radius: 5px; 
+    padding: 0;
+  }
+  
