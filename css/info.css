@@ -81,4 +81,201 @@
 }
 
 
+/* Profil tekst*/
+
+.profil-section{
+    background-color: var(--primary-color);
+    font-family: Arial, sans-serif;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* udraabstegn */
+
+.udraabstegn .icon {
+    width: 120px;
+    height: 120px;
+    display: block;
+}
+
+.udraabstegn-logo{
+    display: inline-flex;
+    border: 10px solid var(--primary-color);
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--secondary-color);
+}
+
+/* tekst */
+
+.h1-profil {
+    color: #9cc1bd;
+    text-align: center;
+    margin-bottom: 20px; 
+    font-size: 2em;
+}
+
+.p-profil {
+    color: #9cc1bd;
+    text-align: center; 
+    margin: 20px 0; 
+    line-height: 1.6;
+    font-size: 1em;
+    max-width: 700px; /* Begrænset bredde */
+    margin-left: auto; /* Centrerer teksten */
+    margin-right: auto; /* Centrerer teksten */
+}
+
+/* infobox */
+
+.infobox {
+    font-family: Arial, sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
+    background-color: var(--primary-color);
+    line-height: 1.6;
+}
+
+.box {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    width: 27rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.box h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.box p {
+    font-size: 1rem;
+    color: var(--primary-color);
+    margin-top: 10px;
+    line-height: 1.4;
+}
+
+.box figure {
+    margin: 0;
+}
+
+
+/* infografik */
+
+.infografik {
+    font-family: Arial, sans-serif; 
+    color: var(--text-color);
+    border: 50px solid var(--primary-color);
+    background-color: var(--accent-color);
+    padding: 40px; 
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--secondary-color);
+}
+
+.baggrund {
+    display: flex; /* Gør containeren fleksibel */
+    justify-content: space-between; /* Fordel elementerne med plads imellem */
+    align-items: center; /* Juster elementerne vertikalt */
+    gap: 20px; /* Tilføj afstand mellem elementer */
+    flex-wrap: wrap; /* Tillad indpakning, hvis skærmen er smal */
+}
+
+/* infografik img */
+
+.info-plade {
+    flex: 1;
+    max-width: 50%;
+    padding: 0; /* Lidt afstand omkring billedet for at give det et pænere udseende */
+}
+
+.info-plade img {
+    display: block; /* Fjern eventuelle unødvendige marginer omkring billeder */
+    width: 90%; /* Sørg for at billedet fylder hele containeren */
+    height: auto; /* Bevar billedets proportioner */
+    margin: 0; /* Fjern standard margin omkring billeder */
+    border: 1px solid var(--primary-color);
+}
+
+
+/* node logo */
+
+.logo-node {
+    width: 220px;
+    height: 220px;  
+    margin: 0 auto; 
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 0;
+    margin-bottom: 4rem;
+}
+
+/* infografik tekst */
+
+.infografik-tekst {
+    flex: 1; /* Lad teksten fylde samme mængde plads som figuren */
+    max-width: 50%; /* Begræns bredden */
+    text-align: center; /* Sørg for at teksten er venstrejusteret */
+}
+
+.infografik-tekst h1 {
+    color: var(--text-color);
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+
+.infografik-tekst p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-top: 10px;
+    line-height: 1.4;
+}
+
+
+
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+    .baggrund {
+        flex-direction: column; /* Stak billeder og tekst vertikalt på små skærme */
+        align-items: center; /* Centrer elementerne horisontalt */
+    }
+
+    .info-plade,
+    .infografik-tekst {
+        max-width: 100%; /* Sørg for at billeder og tekst fylder hele bredden */
+    }
+
+    /* Gør node-logo mindre på små skærme */
+    .logo-node {
+        width: 150px;  /* Gør logoet mindre */
+        height: 150px; /* Behold forholdet */
+        margin-bottom: 20px; /* Tilføj plads under logoet */
+       
+    }
+}
+
+
 

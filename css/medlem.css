@@ -232,7 +232,7 @@ font-size: 2em;
 
 .fordele p {
     padding-top: 20px;
-    font-size: var(--body-font-size);
+    font-size: 1em;
     margin-bottom: 20px;
     line-height: 1.6;
     max-width: 700px; /* Begrænset bredde */
