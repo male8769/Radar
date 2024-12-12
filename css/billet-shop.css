@@ -54,3 +54,25 @@
     color: #052049; /* Omvend farve ved hover */
     transition: background-color 0.3s ease, color 0.3s ease; /* Glidende overgang */
 }
+
+/* velkommen */
+
+.velkommen {
+font-family: Arial, sans-serif;
+background-color: var(--primary-color);
+color: var(--text-color);
+text-align: center;
+padding-top: 40px;
+}
+
+.velkommen h1 {
+    padding-bottom: 30px;
+    font-size: 2em;
+}
+
+.velkommen p {
+font-size: 1.2em;
+max-width: 700px;
+margin: 0 auto;
+line-height: 1.6;
+}
