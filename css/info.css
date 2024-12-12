@@ -32,9 +32,7 @@
 .banner-img img {
     width: 100%; /* Sørger for, at billederne fylder hele figurens bredde */
     height: auto; /* Bevarer billedets proportioner */
-   
-    border: 1px solid #e377b1; /* Mørkeblå ramme */
-       
+    border: 1px solid #e377b1; /* Mørkeblå ramme */  
     background-color: #1a1a1a; /* Mørk baggrundsfarve til at fremhæve rammen */
 }
 
