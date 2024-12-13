@@ -78,11 +78,150 @@
 }
 
 
+/* Kalender */
 
 
 
+.calendar-grid, .weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 kolonner til både ugedage og kalenderdage */
+    gap: 6px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.weekdays {
+    margin-bottom: 10px; /* Afstand til dagene */
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.weekday {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Kalenderdage */
+
+.kalender {
+    background-color: var(--primary-color);
+}
 
 
+.day {
+    position: relative;
+    padding: 10px;
+    background-color: var(--accent-color);
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+.calendar-header {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+.calendar {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    padding: 0;
+    box-shadow: none;
+}
+
+.calendar h1 {
+    font-family: Arial, sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 20px;
+   padding-top: 40px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+    text-align: center;
+}
+
+.day {
+    position: relative;
+    padding: 10px;
+    background-color: var(--accent-color);
+    border-radius: 5px;
+    color: white;
+}
+
+.day:hover {
+    background-color: #003080;
+}
+
+.day .date {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.event-icon {
+    width: 60px;
+    height: 60px;
+    margin: 5px auto 0;
+    display: block;
+    cursor: pointer;
+}
+
+.event-info {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #003060;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    width: 150px;
+}
+
+.day:hover .event-info {
+    display: block;
+}
+
+/* om kalender tekst */
+
+.om-kalender {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center; 
+    line-height: 1.6;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    padding-top: 40px;
+}
+
+.om-kalender h3{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.om-kalender p {
+    font-size: 1.2em;
+    max-width: 700px;
+    text-align: center; 
+    margin: 0 auto;
+}
 
 
 /* billeder af koncerter/tegninger */

@@ -159,3 +159,126 @@ button.kob:hover {
     color: #052049; /* Omvend farve ved hover */
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+
+/* hr styling */
+
+.dotted-line {
+    border: none;
+    border-bottom: 4px dotted var(--secondary-color);
+    margin: 0 auto;
+    width: 65%;
+    padding-top: 20px;
+}
+
+
+/* pris liste */
+
+/* pris-box section styling */
+.pris-box {
+    font-family: Arial, sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
+    line-height: 1.6;
+    font-family: Arial, sans-serif; 
+    border: 50px solid var(--primary-color);
+    padding: 40px; 
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Undersektioner i pris-box */
+.pris-section, .medlem-priser, .gratis {
+    color: var(--primary-color);
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1 1 calc(30% - 20px);
+    text-align: center;
+}
+
+/* Artikel-styling */
+.pris-section article, .medlem-priser article, .gratis article {
+    margin: 20px 0;
+}
+
+.pris-section h2, .medlem-priser h2, .gratis h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+
+.pris-section ul, .medlem-priser ul, .gratis ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.pris-section ul li, .medlem-priser ul li, .gratis ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* frivillig section */
+
+.gratis h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    padding-top: 20px;
+}
+
+/* Specifik styling til frivillig sektion */
+.gratis .frivillig ul {
+    list-style: circle;
+    text-align: left;
+    max-width: 180px;
+    align-items: center;
+    margin-left: 85px;
+}
+
+/* køb billet knap */
+.kob-billet {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.kob-billet:hover {
+    background-color: #ff60b5; /* Skift farve ved hover */
+    color: #052049; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pris-article ul{
+    margin-bottom: 50px;
+}
+
+
+
+
+/* Responsiv styling */
+@media (max-width: 768px) {
+    .pris-box {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .pris-section, .medlem-priser, .gratis {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+
