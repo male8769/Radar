@@ -80,9 +80,7 @@
 
 /* Kalender */
 
-
-
-.calendar-grid, .weekdays {
+.kalender-gitter, .ugedage {
     display: grid;
     grid-template-columns: repeat(7, 1fr); /* 7 kolonner til både ugedage og kalenderdage */
     gap: 6px;
@@ -90,13 +88,12 @@
     font-family: Arial, sans-serif;
 }
 
-.weekdays {
+.ugedage {
     margin-bottom: 10px; /* Afstand til dagene */
-    margin-bottom: 10px;
     text-align: center;
 }
 
-.weekday {
+.ugedag {
     font-size: 18px;
     font-weight: bold;
     color: var(--text-color);
@@ -111,8 +108,7 @@
     background-color: var(--primary-color);
 }
 
-
-.day {
+.dag {
     position: relative;
     padding: 10px;
     background-color: var(--accent-color);
@@ -120,8 +116,7 @@
     text-align: center;
 }
 
-
-.calendar-header {
+.kalender-header {
     text-align: center;
     color: var(--text-color);
     margin-bottom: 20px;
@@ -130,7 +125,7 @@
     font-family: Arial, sans-serif;
 }
 
-.calendar {
+.begivenheder {
     max-width: 800px;
     margin: 0 auto;
     background-color: var(--primary-color);
@@ -139,24 +134,24 @@
     box-shadow: none;
 }
 
-.calendar h1 {
+.begivenheder h1 {
     font-family: Arial, sans-serif;
     font-size: 2em;
     font-weight: bold;
     text-align: center;
     color: var(--text-color);
     margin-bottom: 20px;
-   padding-top: 40px;
+    padding-top: 40px;
 }
 
-.calendar-grid {
+.kalender-gitter {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 6px;
     text-align: center;
 }
 
-.day {
+.dag {
     position: relative;
     padding: 10px;
     background-color: var(--accent-color);
@@ -164,16 +159,16 @@
     color: white;
 }
 
-.day:hover {
+.dag:hover {
     background-color: #003080;
 }
 
-.day .date {
+.dag .dato {
     font-size: 16px;
     margin-bottom: 5px;
 }
 
-.event-icon {
+.begivenhed-ikon {
     width: 60px;
     height: 60px;
     margin: 5px auto 0;
@@ -181,7 +176,7 @@
     cursor: pointer;
 }
 
-.event-info {
+.begivenhed-info {
     display: none;
     position: absolute;
     top: 50px;
@@ -196,11 +191,11 @@
     width: 150px;
 }
 
-.day:hover .event-info {
+.dag:hover .begivenhed-info {
     display: block;
 }
 
-/* om kalender tekst */
+/* Om kalender tekst */
 
 .om-kalender {
     background-color: var(--primary-color);
@@ -212,10 +207,11 @@
     padding-top: 40px;
 }
 
-.om-kalender h3{
+.om-kalender h3 {
     font-size: 1.5em;
     font-weight: bold;
 }
+
 .om-kalender p {
     font-size: 1.2em;
     max-width: 700px;
