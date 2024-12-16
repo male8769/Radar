@@ -77,19 +77,7 @@ margin: 0 auto;
 line-height: 1.6;
 }
 
-
-/* husk */
-
-
-
-
-
-
-
-
-
-
-
+/* pris lister */
 
 /* Styling af section */
 .køb-plakat {
@@ -264,21 +252,124 @@ button.kob-billet:hover {
     margin-bottom: 50px;
 }
 
+/* responsivt styling */
 
-
-
-/* Responsiv styling */
+/* Mobil og Tablet Styling */
 @media (max-width: 768px) {
+    /* Juster layout til mindre skærme */
     .pris-box {
         flex-direction: column;
+    }
+
+    .pris-section, .medlem-priser, .gratis {
+        flex: 1 1 100%; /* Tager fuld bredde på små skærme */
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+
+    .køb-plakat {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;  /* Juster afstand mellem elementer */
         padding: 20px;
     }
-    
-    .pris-section, .medlem-priser, .gratis {
-        flex: 1 1 100%;
-        margin-bottom: 20px;
+
+    .køb {
+        width: 80%; /* Gør produktboksene mindre på mindre skærme */
+    }
+
+    .line {
+        width: 50%; /* Juster linje bredde for bedre justering */
+        margin: 10px 0;
+    }
+
+    /* Juster velkommen sektionen */
+    .velkommen h1 {
+        font-size: 1.8em;
+    }
+
+    .velkommen p {
+        font-size: 1.2em;
+        max-width: 100%;  /* Tillad fuld bredde */
+    }
+
+    /* Opdater fontstørrelser og padding for mobil */
+    .pris-section h2, .medlem-priser h2, .gratis h2 {
+        font-size: 1.2rem;
+    }
+
+    .kob-billet, .bliv-medlem, button.kob {
+        font-size: 16px; /* Mindre knapper på mobil */
+        padding: 8px 16px;  /* Mindre padding */
+    }
+}
+
+/* For meget små skærme (som mobiltelefoner) */
+@media (max-width: 480px) {
+    /* Juster bredder og skrifttyper endnu mere for meget små skærme */
+    .bliv-medlem {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .køb {
+        width: 90%;  /* Gør produktbokse endnu mindre */
+    }
+
+    .velkommen h1 {
+        font-size: 1.5em;
+    }
+
+    .velkommen p {
+        font-size: 0.9em; /* Mindre tekst på mobil */
+    }
+
+    .køb-plakat {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .køb {
+        width: 100%; /* Fuldbredde for mobil */
+    }
+
+    .pris-box {
+        padding: 15px;
+    }
+
+    /* Sørg for, at al tekst er læsbar på små skærme */
+    .pris-section h2, .medlem-priser h2, .gratis h2 {
+        font-size: 1rem;
+    }
+
+    .dotted-line {
+        width: 100%; /* Gør linjen fuld bredde */
     }
 }
 
 
+/* Mobil (maks. 600px) */
+@media (max-width: 600px) {
+    /* Ændre knappen, så den fylder bredden på mobilen */
+
+   
+    .bliv-medlem {
+        width: 80%; 
+        padding: 12px 24px; 
+        font-size: 18px; 
+    }
+
+    /* Linjer justeres for at fylde mere */
+    .line {
+        width: 50%; 
+        margin: 10px 0; 
+    }
+
+    /* Containeren for knappen bliver centreret */
+    .medlemskab {
+        flex-direction: column; 
+        padding: 10px 0; 
+    }
+}
 

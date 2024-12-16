@@ -156,3 +156,29 @@ footer {
     width: 100%;
     margin-top: 0px;
 }
+
+
+
+/* Mobil (maks. 600px) */
+@media (max-width: 600px) {
+    /* Ændre knappen, så den fylder bredden på mobilen */
+
+   
+    .bliv-medlem {
+        width: 80%; 
+        padding: 12px 24px; 
+        font-size: 18px; 
+    }
+
+    /* Linjer justeres for at fylde mere */
+    .line {
+        width: 50%; 
+        margin: 10px 0; 
+    }
+
+    /* Containeren for knappen bliver centreret */
+    .medlemskab {
+        flex-direction: column; 
+        padding: 10px 0; 
+    }
+}

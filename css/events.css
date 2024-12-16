@@ -106,6 +106,9 @@
 
 .kalender {
     background-color: var(--primary-color);
+    border: none; /* Fjern border hvis der er en utilsigtet */
+    padding: 0; /* Sørg for at der ikke er nogen ekstra padding */
+    margin: 0; /* Fjern margin */
 }
 
 .dag {
@@ -246,3 +249,78 @@
     padding: 0;
   }
   
+@media (max-width: 600px) {
+    /* Fjern margin og padding på body og html */
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden; /* Hindrer horisontal scroll */
+    }
+
+    .begivenheder {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .kalender {
+        margin: 0;
+        padding: 15px;
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        overflow: hidden; /* Hindrer overskydende indhold */
+    }
+
+    .kalender-gitter {
+        gap: 4px;
+        padding: 0;
+    }
+
+    .dag {
+        padding: 8px;
+    }
+
+    .dag .dato {
+        font-size: 14px;
+    }
+
+    .ugedag {
+        font-size: 14px;
+    }
+
+    .kalender-header {
+        font-size: 1em;
+    }
+
+    .begivenhed-ikon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .begivenheder h1 {
+        font-size: 1.5em;
+    }
+}
+
+
+/* Tablet (max-width: 768px) */
+@media (max-width: 768px) {
+    .koncerter {
+        grid-template-columns: repeat(2, 1fr); /* To kolonner */
+        gap: 30px; /* Mindre mellemrum */
+        padding: 30px; /* Mindre padding */
+    }
+}
+
+/* Mobil (max-width: 480px) */
+@media (max-width: 480px) {
+    .koncerter {
+        grid-template-columns: 1fr; /* En kolonne */
+        gap: 20px; /* Mindre mellemrum */
+        padding: 20px; /* Mindre padding */
+    }
+}

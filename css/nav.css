@@ -84,13 +84,65 @@ nav{
     display: none;
   }
 
-  .menu-icon:hover.{
+  .menu-icon:hover{
     color: var(--hovor-color);
   }
   
   /* responsiv */
 
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
+    .navbar {
+        padding: 10px 20px; /* Juster navbar padding for mindre skærme */
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: var(--primary-color);
+        width: 100%;
+        padding: 20px 0;  /* Plads til links i menuen */
+    }
+
+    .menu-checkbox:checked ~ .nav-links {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+        color: var(--text-color);
+    }
+
+    .nav-links li {
+        padding: 10px 0; /* Giver bedre plads mellem links */
+        text-align: center;
+        margin: 0;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+        font-weight: normal;  /* Ændrer vægt på tekst */
+    }
+
+    .logo img {
+        width: 100px; /* Mindre logo på de mindste skærme */
+    }
+
+    .nav-links li:hover {
+        background-color: var(--secondary-color); /* Hover baggrund */
+    }
+}
+
+/* For tablet enheder (skærmbredde op til 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 30px; /* Justeret padding for tablets */
+    }
+
     .nav-links {
         display: none;
         flex-direction: column;
@@ -109,5 +161,54 @@ nav{
         display: block;
         font-size: 24px;
         cursor: pointer;
+        color: var(--text-color);
+    }
+
+    .nav-links li {
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .logo img {
+        width: 120px; /* Juster logoet til tabletstørrelse */
+    }
+
+    .nav-links a {
+        font-size: 20px;
+        font-weight: normal;
+    }
+}
+
+/* For desktop enheder (fra 769px og op) */
+@media (min-width: 769px) {
+    .navbar {
+        padding: 10px 55px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+        width: auto;
+        padding: 0;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .nav-links li {
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    .logo img {
+        width: 150px; /* Standard logo størrelse for desktop */
+    }
+
+    .nav-links a {
+        font-size: 18px;
+        font-weight: bold;
     }
 }
