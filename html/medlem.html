@@ -53,18 +53,19 @@
             <!-- Medlemskabsniveau -->
             <fieldset>
               <legend>Vælg medlemskabsniveau</legend>
-                <select id="medlemskab-niveau" name="medlemskab-niveau" required>
-                    <option value="basic">Basismedlemskab - 50 kr./måned</option>
-                    <option value="premium">Premium Medlemskab - 100 kr./måned</option>
-                    <option value="vip">VIP Medlemskab - 200 kr./måned</option>
-                </select>
-            </fieldset>
+              <select id="medlemskab-niveau" name="medlemskab-niveau" required>
+                  <option value="" disabled selected>Vælg et medlemskabsniveau</option>
+                  <option value="basic">Basismedlemskab - 50 kr./måned</option>
+                  <option value="premium">Premium Medlemskab - 100 kr./måned</option>
+                  <option value="vip">VIP Medlemskab - 200 kr./måned</option>
+              </select>
+          </fieldset>
 
             <!-- Betalingsoplysninger -->
             <fieldset>
               <legend>Betalingsoplysninger</legend>
                 <input type="text" id="kreditkort-nummer" name="kreditkort-nummer" placeholder="Kreditkortnummer" required>
-                <input type="month" id="udløbs-dato" name="udløbs-dato" placeholder="Udløbsdato" required>
+                <input type="text" id="udløbs-dato" name="udløbs-dato" placeholder="Udløbsdato" required>
                 <input type="text" id="cvv" name="cvv" placeholder="CVV" required>
             </fieldset>
           </section>
