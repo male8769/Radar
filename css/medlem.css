@@ -1,37 +1,41 @@
+/* Nulstilling af margin, padding og box-sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Farvevariabler */
 :root {
-    --primary-color: #052049; /* mørkeblå */
-    --secondary-color: #FF99CF; /* lysserød */
-    --accent-color: #633B90; /* lilla */
-    --text-color: #FF99CF; /* lysserød */
-    --hovor-color:#e377b1; /* mørk lysserød */
-    --pxfoto-color:#050f1f;/* mørk blå til 1px rundt om billeder */
+    --primary-color: #052049; /* Mørkeblå */
+    --secondary-color: #FF99CF; /* Lyserød */
+    --accent-color: #633B90; /* Lilla */
+    --text-color: #FF99CF; /* Lyserød tekst */
+    --hovor-color: #e377b1; /* Hover-lyserød */
+    --pxfoto-color: #050f1f; /* Ekstra mørk blå */
 }
 
-/* bliv medlem form */
+/* MAIN SECTION */
 main {
     background-color: var(--secondary-color);
     padding: 40px;
 }
 
+/* FORMULAR - Wrapper */
 .medlemskabs-formular {
     background-color: var(--primary-color);
     padding: 20px;
     border-radius: 8px;
 }
 
+/* FORM STYLING */
 .form {
     padding: 20px;
     display: flex;
     flex-direction: column;
 }
 
-/* header styling */
+/* FORM HEADER */
 .header {
     font-family: Arial, sans-serif;
     color: var(--text-color);
@@ -42,72 +46,65 @@ main {
 .header h2 {
     font-size: 2em;
     margin-bottom: 10px;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .header p {
     font-size: 1.2em;
-    font-weight: bold;
-
+    font-weight: 700;
 }
 
-
-/* fieldset styling */
+/* FIELDSET OG INPUTS */
 fieldset {
     border: none;
     padding: 0;
     margin: 0;
-    background: none;
+    background: transparent;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 15px 0;
 }
 
-
 .form-sektion {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     justify-content: space-between;
 }
 
-/* Ensartet størrelse for inputfelter */
-fieldset input, 
+fieldset input,
 fieldset select {
-    width: 100%; /* Sørger for at felterne fylder hele containerens bredde */
-    max-width: 400px; /* Begrænser bredden for at sikre et ensartet udseende */
+    width: 100%;
+    max-width: 400px;
     padding: 10px;
     margin-top: 10px;
     border: 1px solid var(--secondary-color);
     border-radius: 5px;
     font-size: 1em;
     color: var(--primary-color);
-    font-weight: bold;
+    font-weight: 700;
     background-color: var(--secondary-color);
-    box-sizing: border-box; /* Sikrer, at padding ikke øger feltets totale bredde */
+    box-sizing: border-box;
 }
 
-fieldset input::placeholder, 
+fieldset input::placeholder,
 fieldset select::placeholder {
     color: var(--primary-color);
-    font-weight: bold;
+    font-weight: 700;
 }
 
-/* legend styling */
 legend {
     font-family: Arial, sans-serif;
     color: var(--secondary-color);
-    font-weight: bold;
-    text-align: center; /* Centrerer legend */
-    margin-bottom: 10px; /* Giver lidt afstand mellem legend og inputfelterne */
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
-/* bekræft af betingelserne */
 fieldset label {
     font-family: Arial, sans-serif;
-    color: var(--text-color); 
-    font-weight: bold;
+    color: var(--text-color);
+    font-weight: 700;
 }
 
 fieldset a {
@@ -119,7 +116,7 @@ fieldset a:hover {
     text-decoration: underline;
 }
 
-/* checkbox styling */
+/* CHECKBOX STYLING */
 input[type="checkbox"] {
     appearance: none;
     -webkit-appearance: none;
@@ -127,7 +124,6 @@ input[type="checkbox"] {
     width: 20px;
     height: 20px;
     border-radius: 4px;
-    /* border: 2px solid var(--secondary-color); */
     background-color: var(--secondary-color);
     position: relative;
     transition: background-color 0.3s ease;
@@ -135,30 +131,30 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:checked {
-    background-color: var(--secondary-color); 
-    border-color: var(--secondary-color); 
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
 }
 
 input[type="checkbox"]:checked::after {
-    content: '✔'; 
-    color: var(--primary-color); 
-    font-size: 16px; /* Størrelse på checkmærket */
+    content: '✔';
+    color: var(--primary-color);
+    font-size: 16px;
     position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-/* Bekræft-knap centring */
+/* BEKRÆFT KNAP */
 .bekræft {
     display: flex;
-    justify-content: center; /* Centrerer knappen */
+    justify-content: center;
     margin-top: 20px;
 }
 
 .bekræft-knap {
     font-family: Arial, sans-serif;
-    font-weight: bold;
+    font-weight: 700;
     border: none;
     border-radius: 5px;
     padding: 12px 20px;
@@ -166,34 +162,32 @@ input[type="checkbox"]:checked::after {
     color: var(--primary-color);
     cursor: pointer;
     font-size: 1.1rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .bekræft-knap:hover {
     background-color: #fd67b7;
     color: #013685;
-    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-
-/* medlemsfordele */
-
-.medlems-fordele{
+/* FORDELE SEKTIONS-STYLING */
+.medlems-fordele {
     background-color: var(--primary-color);
     color: #9cc1bd;
     font-family: Arial, sans-serif;
 }
 
 .fordele {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .fordele h1 {
-padding-top: 50px;
-font-size: 2em;
+    padding-top: 50px;
+    font-size: 2em;
 }
 
 .fordele h3 {
@@ -212,36 +206,37 @@ font-size: 2em;
 .fordele li {
     font-size: 1rem;
     margin-top: 10px;
-    margin-top: 10px;
     line-height: 1.6;
     padding: 10px 0;
     border-bottom: 1px solid #9cc1bd;
     width: 100%;
     text-align: center;
+    transition: background-color 0.3s ease;
 }
 
 .fordele li strong {
     color: #ff99cfd9;
 }
+
 .fordele li:hover {
     background-color: #013685;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
-
 
 .fordele p {
     padding-top: 20px;
     font-size: 1em;
     margin-bottom: 20px;
     line-height: 1.6;
-    max-width: 700px; /* Begrænset bredde */
-    margin-left: auto; /* Centrerer teksten */
-    margin-right: auto; /* Centrerer teksten */
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
 }
 
-/* Responsivt design */
+/* MEDIA QUERIES */
+
+/* Skærme mindre end 768px */
 @media (max-width: 768px) {
     .fordele {
         padding: 10px;
@@ -258,36 +253,7 @@ font-size: 2em;
     .fordele li {
         font-size: 0.9em;
     }
-}
 
-
-/* Mobil (max-width: 600px) */
-@media (max-width: 600px) {
-    .form {
-        flex-direction: column; 
-    }
-
-    .form-sektion {
-        flex-direction: column; 
-        align-items: stretch; 
-    }
-
-    .header h2 {
-        font-size: 1.5em; 
-    }
-
-    fieldset input, 
-    fieldset select {
-        max-width: 100%; 
-    }
-
-    .bekræft-knap {
-        font-size: 1rem; 
-    }
-}
-
-/* Tablet (max-width: 768px) */
-@media (max-width: 768px) {
     .form {
         flex-direction: column;
     }
@@ -298,12 +264,12 @@ font-size: 2em;
     }
 
     .header h2 {
-        font-size: 1.8em; 
+        font-size: 1.8em;
     }
 
-    fieldset input, 
+    fieldset input,
     fieldset select {
-        max-width: 100%; 
+        max-width: 100%;
     }
 
     .bekræft-knap {
@@ -311,3 +277,18 @@ font-size: 2em;
     }
 }
 
+/* Skærme mindre end 600px */
+@media (max-width: 600px) {
+    .header h2 {
+        font-size: 1.5em;
+    }
+
+    fieldset input,
+    fieldset select {
+        max-width: 100%;
+    }
+
+    .bekræft-knap {
+        font-size: 1rem;
+    }
+}
