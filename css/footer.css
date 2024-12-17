@@ -1,86 +1,92 @@
+/* Nulstilling af margin, padding og box-sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Farvevariabler */
 :root {
     --primary-color: #052049; /* mørkeblå */
     --secondary-color: #FF99CF; /* lysserød */
     --accent-color: #633B90; /* lilla */
-    --text-color: #FF99CF; /* lysserød */
+    --text-color: #FF99CF; /* lysserød tekstfarve */
 }
 
-/* footer styling */
+/* FOOTER */
+
+/* Styling for hele footer */
 footer {
-    font-family: Arial, sans-serif;
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    padding: 40px 20px;
-    text-align: center;
+    font-family: Arial, sans-serif; /* Standard skrifttype */
+    background-color: var(--primary-color); /* Mørkeblå baggrund */
+    color: var(--text-color); /* Lysserød tekst */
+    padding: 40px 20px; /* Indvendig afstand */
+    text-align: center; /* Centreret tekst */
 }
 
-/* Flex container for footer */
+/* Footer container med fleksibelt layout */
 .footer {
     display: flex;
-    flex-direction: column; 
-    justify-content: flex-start;
-    align-items: center; 
-    max-width: 1200px;
-    margin: 0 auto;
+    flex-direction: column; /* Stabler elementer lodret */
+    justify-content: flex-start; /* Start i toppen */
+    align-items: center; /* Centrer elementer horisontalt */
+    max-width: 1200px; /* Maksimal bredde for centreret indhold */
+    margin: 0 auto; /* Centrer containeren i midten */
 }
 
-/* Logo styling */
+/* Footer logo styling */
 .footer-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px; /* Afstand mellem logo og tekst */
+    display: flex; /* Flexbox for centreret logo */
+    justify-content: center; /* Centrer logoet horisontalt */
+    align-items: center; /* Centrer logoet vertikalt */
+    margin-bottom: 20px; /* Afstand under logo */
 }
 
+/* Radar logo specifik styling */
 footer img.radar-logo {
-    max-width: 200px; 
+    max-width: 200px; /* Begræns logoets størrelse */
 }
 
-
+/* Sektioner i footer */
 footer section {
-    width: 100%;
-    max-width: 400px; 
-    margin: 10px 0; 
+    width: 100%; /* Fylder hele bredden */
+    max-width: 400px; /* Maksimal bredde for hver sektion */
+    margin: 10px 0; /* Afstand mellem sektionerne */
 }
 
-/* Tekst styling */
+/* Footer overskrifter */
 footer .footer-h3 {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
+    font-size: 20px; /* Overskriftens størrelse */
+    font-weight: 700; /* Fed skrift */
+    margin-bottom: 10px; /* Afstand under overskriften */
 }
 
+/* Generel styling for overskrifter */
 .footer-h3-generel {
-    padding-top: 20px;
+    padding-top: 20px; /* Ekstra plads over overskriften */
 }
 
+/* Footer paragraffer */
 footer .footer-p {
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 16px; /* Tekststørrelse */
+    line-height: 1.5; /* Linjeafstand */
 }
 
+/* Links i footer paragraffer */
 footer .footer-p a {
-    color: var(--text-color);
-    text-decoration: none;
+    color: var(--text-color); /* Arver lysserød tekstfarve */
+    text-decoration: none; /* Fjern understregning */
 }
 
 footer .footer-p a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Understregning ved hover */
 }
 
-/* hr styling */
+/* HR - Stiplet linje */
 hr {
-    border: none;
-    border-bottom: 4px dotted var(--secondary-color);
-    margin: 20px auto;
-    width: 65%;
+    border: none; /* Fjern standardrammen */
+    border-bottom: 4px dotted var(--secondary-color); /* Stiplet linje i lyserød */
+    margin: 20px auto; /* Centrer linjen og tilføj plads */
+    width: 65%; /* Linjens bredde */
     padding-top: 0;
 }
-
-
