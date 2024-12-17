@@ -1,154 +1,166 @@
+/* Nulstilling af margin, padding og box-sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Farvevariabler */
 :root {
-    --primary-color: #052049; /* mørkeblå */
-    --secondary-color: #FF99CF; /* lysserød */
-    --accent-color: #633B90; /* lilla */
-    --text-color: #FF99CF; /* lysserød */
-    --hovor-color:#e377b1; /* mørk lysserød */
+    --primary-color: #052049; /* Mørkeblå */
+    --secondary-color: #FF99CF; /* Lyserød */
+    --accent-color: #633B90; /* Lilla */
+    --text-color: #FF99CF; /* Lyserød tekst */
+    --hovor-color: #e377b1; /* Mørkere lyserød til hover */
 }
 
-/* generel styling for navbaren */
-nav{
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    position: sticky; /* Gør navbaren sticky */
-    top: 0; /* Lås navbaren til toppen */
-    z-index: 1000; /* Sørger for, at navbaren ligger ovenpå andet indhold */
-    width: 100%; /* Sørger for, at navbaren strækker sig over hele bredden */
+/* NAVIGATION */
+
+/* Grundlæggende nav-bar styling */
+nav {
+    background-color: var(--primary-color); /* Mørkeblå baggrund */
+    color: var(--text-color); /* Lyserød tekst */
+    position: sticky; /* Gør navigationen sticky */
+    top: 0; /* Fastgør den i toppen */
+    z-index: 1000; /* Holder den over andre elementer */
+    width: 100%; /* Fuldbredde */
 }
 
+/* Navbar container */
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px 20px; /* Reduceret padding */
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Centrerer vertikalt */
+    justify-content: space-between; /* Plads mellem logo og links */
+    padding: 5px 20px; /* Indvendig afstand */
 }
 
-/* logo */
-
+/* Logo styling */
 nav .logo img {
-    width: 200px;
-  }
-
-/* links farver og decor */
-
-  nav a{
-    text-decoration: none;
-    color: var(--text-color);
-  }
-
-  nav a:hover {
-    color: var(--hovor-color);
-  }
-
-  nav a:focus {
-    outline-color:var(--hovor-color);
-    color: var(--hovor-color);
-  }
-
-  /* styling af links */
-
-  .nav-links {
-    display: flex;
-    list-style: none;
-    margin-left: auto;
-  }
-
-  .nav-links li {
-    margin: 0 1rem;
-    padding: 0;
-  }
-
-  .nav-links a {
-    display: flex;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-  }
-
-  nav a {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
+    width: 200px; /* Logoets størrelse */
 }
 
-  /* burger menu */
-  .menu-checkbox {
-    display: none;
-  }
+/* Links styling */
+nav a {
+    text-decoration: none; /* Fjern understregning */
+    color: var(--text-color); /* Lyserød farve */
+    font-family: Arial, sans-serif;
+    font-size: 16px; /* Standard skriftstørrelse */
+}
 
-   .menu-icon {
-    display: none;
-  }
+/* Links hover og fokus */
+nav a:hover {
+    color: var(--hovor-color); /* Skift farve ved hover */
+}
 
-  .menu-icon:hover{
-    color: var(--hovor-color);
-  }
-  /* responsiv */
+nav a:focus {
+    outline-color: var(--hovor-color); /* Fokus-outline farve */
+    color: var(--hovor-color); /* Skift farve ved fokus */
+}
+
+/* Links container */
+.nav-links {
+    display: flex; /* Flexbox for links */
+    list-style: none; /* Fjern bullets */
+    margin-left: auto; /* Skub links til højre */
+}
+
+/* Styling for hvert link */
+.nav-links li {
+    margin: 0 1rem; /* Afstand mellem links */
+    padding: 0; /* Ingen padding */
+}
+
+.nav-links a {
+    display: flex;
+    text-decoration: none;
+    font-size: 18px; /* Større skrift */
+    font-weight: 700; /* Fed tekst */
+}
+
+/* MENU IKON OG CHECKBOX */
+
+/* Skjul menu checkbox og ikon som standard */
+.menu-checkbox {
+    display: none; /* Skjules som standard */
+}
+
+.menu-icon {
+    display: none; /* Skjules som standard */
+}
+
+.menu-icon:hover {
+    color: var(--hovor-color); /* Skift farve ved hover */
+}
+
+/* MEDIA QUERIES */
+
+/* Skærme mindre end 480px */
 @media (max-width: 480px) {
+    /* Reducér padding i navbar */
     .navbar {
-        padding: 8px 15px; /* Juster navbar padding for mindre skærme */
+        padding: 8px 15px;
         padding-bottom: 0;
         padding-top: 0;
     }
 
+    /* Skjul links og vis dem som kolonne */
     .nav-links {
         display: none;
-        flex-direction: column;
+        flex-direction: column; /* Kolonne layout */
         position: absolute;
-        top: 60px;
+        top: 60px; /* Placer under navbar */
         right: 0;
-        background-color: var(--primary-color);
-        width: 100%;
-        padding: 10px 0;  /* Reduceret plads til links */
+        background-color: var(--primary-color); /* Mørkeblå baggrund */
+        width: 100%; /* Fylder hele bredden */
+        padding: 10px 0;
     }
 
+    /* Vis links når checkbox er tjekket */
     .menu-checkbox:checked ~ .nav-links {
         display: flex;
     }
 
+    /* Menu ikon styling */
     .menu-icon {
-        display: block;
-        font-size: 24px; /* Mindre burger-ikon */
+        display: block; /* Vis ikon */
+        font-size: 24px;
         cursor: pointer;
-        color: var(--text-color);
+        color: var(--text-color); /* Lyserød farve */
     }
 
+    /* Links styling */
     .nav-links li {
-        padding: 8px 0; /* Mindre plads mellem links */
-        text-align: center;
+        padding: 8px 0; /* Lodret afstand mellem links */
+        text-align: center; /* Centreret tekst */
         margin: 0;
     }
 
     .nav-links a {
-        font-size: 16px; /* Mindre fontstørrelse */
-        font-weight: normal;
+        font-size: 16px;
+        font-weight: 400;
     }
 
+    /* Logo størrelse */
     .logo img {
-        width: 90px; /* Mindre logo */
+        width: 90px;
     }
 
     .nav-links li:hover {
-        background-color: var(--secondary-color);
+        background-color: var(--secondary-color); /* Lyserød hover-baggrund */
     }
 }
 
-/* For tablet enheder */
+/* Skærme mindre end 768px */
 @media (max-width: 768px) {
     .navbar {
-        padding: 8px 20px; /* Mindre padding på tablet */
+        padding: 8px 20px;
         padding-bottom: 0;
         padding-top: 0;
     }
 
     .nav-links {
         display: none;
-        flex-direction: column;
+        flex-direction: column; /* Kolonne layout */
         position: absolute;
         top: 60px;
         right: 0;
@@ -156,6 +168,7 @@ nav .logo img {
         width: 100%;
     }
 
+    /* Vis links når checkbox er tjekket */
     .menu-checkbox:checked ~ .nav-links {
         display: flex;
     }
@@ -173,48 +186,47 @@ nav .logo img {
     }
 
     .logo img {
-        width: 110px; /* Mindre logo */
+        width: 110px;
     }
 
     .nav-links a {
         font-size: 18px;
-        font-weight: normal;
+        font-weight: 400;
     }
 }
 
-/* For desktop enheder */
+/* Skærme større end 769px */
 @media (min-width: 769px) {
-    
     .navbar {
-        padding: 7px 40px; 
+        padding: 7px 40px;
         padding-bottom: 0;
         padding-top: 0;
     }
 
     .nav-links {
         display: flex;
-        flex-direction: row;
-        position: static;
-        background-color: transparent;
+        flex-direction: row; /* Række layout */
+        position: static; /* Normal placering */
+        background-color: transparent; /* Fjern baggrund */
         width: auto;
         padding: 0;
     }
 
     .menu-icon {
-        display: none;
+        display: none; /* Skjul menu ikon */
     }
 
     .nav-links li {
-        padding: 0 0.8rem;
+        padding: 0 0.8rem; /* Vandret afstand */
         text-align: center;
     }
 
     .logo img {
-        width: 140px; /* Mindre logo */
+        width: 140px;
     }
 
     .nav-links a {
-        font-size: 16px; /* Mindre fontstørrelse */
-        font-weight: bold;
+        font-size: 16px;
+        font-weight: 700;
     }
 }
