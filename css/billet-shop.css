@@ -1,169 +1,150 @@
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-:root {
-    --primary-color: #052049; /* mørkeblå */
-    --secondary-color: #FF99CF; /* lysserød */
-    --accent-color: #633B90; /* lilla */
-    --text-color: #FF99CF; /* lysserød */
-    --hovor-color:#e377b1; /* mørk lysserød */
-    --pxfoto-color:#050f1f;/* mørk blå til 1px rundt om billeder */
-}
-
-
-
-/* bliv medlem knap */
-
-/* Container for knappen og linjer */
-.medlemskab {
-    display: flex; /* Flexbox til horisontal layout */
-    align-items: center; /* Vertikal centreret layout */
-    justify-content: center; /* Centrerer hele sektionen */
-    background-color: var(--secondary-color); /* Baggrundsfarve (lyserød) */
-    padding: 20px 0; /* Plads over og under */
-}
-
-/* Hr styling */
-.line {
-    border: none; 
-    border-top: 4px dotted var(--primary-color); /* Stiplet linje */
-    margin: 0 10px; /* Plads mellem linjerne og knappen */
-    width: 25%; /* Procentuel bredde */
-    flex-shrink: 0; /* Sørger for, at linjerne ikke krymper */
+  }
+  
+  /* Root Variables */
+  :root {
+    --primary-color: #052049;
+    --secondary-color: #FF99CF;
+    --accent-color: #633B90;
+    --text-color: #FF99CF;
+    --hovor-color: #e377b1;
+    --pxfoto-color: #050f1f;
+  }
+  
+  /* Medlemskab Section */
+  .medlemskab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    padding: 20px 0;
+  }
+  
+  .line {
+    border: none;
+    border-top: 4px dotted var(--primary-color);
+    margin: 0 10px;
+    width: 25%;
+    flex-shrink: 0;
     padding-top: 0;
-}
-
-/* Knappens styling */
-.bliv-medlem {
-    background-color: var(--primary-color); /* Mørkeblå baggrundsfarve */
-    color: var(--secondary-color); 
-    font-size: 16px; /* Tekststørrelse */
-    font-weight: bold; /* Fed tekst */
-    padding: 10px 20px; /* Indvendig afstand for knappen */
-    border: none; /* Fjern standardkant */
-    border-radius: 15px; /* Afrundede hjørner */
-    cursor: pointer; /* Gør knappen klikbar */
-    display: inline-block; /* Gør knappen inline-block for bedre fleksibilitet */
-}
-
-.bliv-medlem:hover {
-    background-color: #ff60b5; /* Skift farve ved hover */
-    color: #052049; /* Omvend farve ved hover */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Glidende overgang */
-}
-
-/* velkommen */
-
-.velkommen {
-font-family: Arial, sans-serif;
-background-color: var(--primary-color);
-color: var(--text-color);
-text-align: center;
-padding-top: 40px;
-}
-
-.velkommen h1 {
-padding-bottom: 30px;
-font-size: 2em;
-}
-
-.velkommen p {
-font-size: 1.2em;
-max-width: 700px;
-margin: 0 auto;
-line-height: 1.6;
-}
-
-/* pris lister */
-
-/* Styling af section */
-.køb-plakat {
+  }
+  
+  .bliv-medlem {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    display: inline-block;
+  }
+  
+  .bliv-medlem:hover {
+    background-color: #ff60b5;
+    color: #052049;
+    transition: background-color .3s ease, color .3s ease;
+  }
+  
+  /* Velkommen Section */
+  .velkommen {
+    font-family: Arial, sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding-top: 40px;
+  }
+  
+  .velkommen h1 {
+    padding-bottom: 30px;
+    font-size: 2em;
+  }
+  
+  .velkommen p {
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  /* Køb Plakat Section */
+  .køb-plakat {
     display: flex;
     justify-content: center;
     gap: 40px;
     flex-wrap: wrap;
-    font-family: Arial, sans-serif; 
+    font-family: Arial, sans-serif;
     border: 50px solid var(--primary-color);
     background-color: var(--accent-color);
-    padding: 40px; 
+    padding: 40px;
     margin: 0;
     box-sizing: border-box;
-
-}
-
-/* Styling af article */
-.køb {
+  }
+  
+  .køb {
     background-color: #441b71;
     border-radius: 8px;
     padding: 20px;
     text-align: center;
     width: 250px;
-    
-}
-
-/* Pris */
-.køb h2 {
+  }
+  
+  .køb h2 {
     font-size: 2em;
     margin: 0 0 10px 0;
-    color: white;
-}
-
-/* Styling af figure */
-.plakat {
+    color: #fff;
+  }
+  
+  .plakat {
     margin: 0;
-}
-
-.plakat img {
+  }
+  
+  .plakat img {
     width: 100%;
     border-radius: 8px;
     border: 1px solid #3a105d;
-}
-
-/* Produktbeskrivelse */
-.køb p {
+  }
+  
+  .køb p {
     font-size: 16px;
     margin: 10px 0;
-    color: white;
-}
-
-/* KØB knap */
-button.kob {
+    color: #fff;
+  }
+  
+  button.kob {
     background-color: var(--secondary-color);
     color: var(--primary-color);
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 700;
     border: none;
     border-radius: 8px;
     padding: 10px 20px;
     cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button.kob:hover {
-    background-color: #ff60b5; /* Skift farve ved hover */
-    color: #052049; /* Omvend farve ved hover */
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-
-/* hr styling */
-
-.dotted-line {
+    transition: background-color .3s;
+  }
+  
+  button.kob:hover {
+    background-color: #ff60b5;
+    color: #052049;
+    transition: background-color .3s ease, color .3s ease;
+  }
+  
+  /* Dotted Line */
+  .dotted-line {
     border: none;
     border-bottom: 4px dotted var(--secondary-color);
     margin: 0 auto;
     width: 65%;
     padding-top: 20px;
-}
-
-
-/* pris liste */
-
-/* pris-box section styling */
-.pris-box {
+  }
+  
+  /* Pris Box Section */
+  .pris-box {
     font-family: Arial, sans-serif;
     background-color: var(--secondary-color);
     color: var(--primary-color);
@@ -173,203 +154,179 @@ button.kob:hover {
     gap: 20px;
     padding: 40px;
     line-height: 1.6;
-    font-family: Arial, sans-serif; 
     border: 50px solid var(--primary-color);
-    padding: 40px; 
     margin: 0;
     box-sizing: border-box;
-}
-
-/* Undersektioner i pris-box */
-.pris-section, .medlem-priser, .gratis {
+  }
+  
+  .gratis, .medlem-priser, .pris-section {
     color: var(--primary-color);
     border-radius: 10px;
     padding: 20px;
     flex: 1 1 calc(30% - 20px);
     text-align: center;
-}
-
-/* Artikel-styling */
-.pris-section article, .medlem-priser article, .gratis article {
+  }
+  
+  .gratis article, .medlem-priser article, .pris-section article {
     margin: 20px 0;
-}
-
-.pris-section h2, .medlem-priser h2, .gratis h2 {
+  }
+  
+  .gratis h2, .medlem-priser h2, .pris-section h2 {
     font-size: 1.5rem;
     margin-bottom: 15px;
-}
-
-
-.pris-section ul, .medlem-priser ul, .gratis ul {
+  }
+  
+  .gratis ul, .medlem-priser ul, .pris-section ul {
     list-style: none;
     padding: 0;
     margin: 0;
-}
-
-
-.pris-section ul li, .medlem-priser ul li, .gratis ul li {
+  }
+  
+  .gratis ul li, .medlem-priser ul li, .pris-section ul li {
     margin-bottom: 10px;
     font-size: 1.1rem;
-}
-
-/* frivillig section */
-
-.gratis h3 {
+  }
+  
+  .gratis h3 {
     font-size: 1.2rem;
     margin-bottom: 15px;
     padding-top: 20px;
-}
-
-/* Specifik styling til frivillig sektion */
-.gratis .frivillig ul {
+  }
+  
+  .gratis .frivillig ul {
     list-style: circle;
     text-align: left;
     max-width: 180px;
     align-items: center;
     margin-left: 85px;
-}
-
-/* køb billet knap */
-.kob-billet {
+  }
+  
+  /* Kob Billet Button */
+  .kob-billet {
     background-color: var(--primary-color);
     color: var(--text-color);
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 700;
     border: none;
     border-radius: 8px;
     padding: 10px 20px;
     cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button.kob-billet:hover {
-    background-color: #ff60b5; /* Skift farve ved hover */
-    color: #052049; 
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.pris-article ul{
+    transition: background-color .3s;
+  }
+  
+  button.kob-billet:hover {
+    background-color: #ff60b5;
+    color: #052049;
+    transition: background-color .3s ease, color .3s ease;
+  }
+  
+  /* Price Article */
+  .pris-article ul {
     margin-bottom: 50px;
-}
-
-/* responsivt styling */
-
-/* Mobil og Tablet Styling */
-@media (max-width: 768px) {
-    /* Juster layout til mindre skærme */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
     .pris-box {
-        flex-direction: column;
+      flex-direction: column;
     }
-
-    .pris-section, .medlem-priser, .gratis {
-        flex: 1 1 100%; /* Tager fuld bredde på små skærme */
-        margin-bottom: 0;
-        padding: 0;
+  
+    .gratis, .medlem-priser, .pris-section {
+      flex: 1 1 100%;
+      margin-bottom: 0;
+      padding: 0;
     }
-
-
+  
     .køb-plakat {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;  /* Juster afstand mellem elementer */
-        padding: 20px;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
     }
-
+  
     .køb {
-        width: 80%; /* Gør produktboksene mindre på mindre skærme */
+      width: 80%;
     }
-
+  
     .line {
-        width: 50%; /* Juster linje bredde for bedre justering */
-        margin: 10px 0;
+      width: 50%;
+      margin: 10px 0;
     }
-
-    /* Juster velkommen sektionen */
+  
     .velkommen h1 {
-        font-size: 1.8em;
+      font-size: 1.8em;
     }
-
+  
     .velkommen p {
-        font-size: 1.2em;
-        max-width: 100%;  /* Tillad fuld bredde */
+      font-size: 1.2em;
+      max-width: 100%;
     }
-
-    /* Opdater fontstørrelser og padding for mobil */
-    .pris-section h2, .medlem-priser h2, .gratis h2 {
-        font-size: 1.2rem;
+  
+    .gratis h2, .medlem-priser h2, .pris-section h2 {
+      font-size: 1.2rem;
     }
-
-    .kob-billet, .bliv-medlem, button.kob {
-        font-size: 16px; /* Mindre knapper på mobil */
-        padding: 8px 16px;  /* Mindre padding */
+  
+    .bliv-medlem, .kob-billet, button.kob {
+      font-size: 16px;
+      padding: 8px 16px;
     }
-}
-
-/* For meget små skærme (som mobiltelefoner) */
-@media (max-width: 480px) {
-    /* Juster bredder og skrifttyper endnu mere for meget små skærme */
+  }
+  
+  @media (max-width: 480px) {
     .bliv-medlem {
-        font-size: 14px;
-        padding: 8px 16px;
+      font-size: 14px;
+      padding: 8px 16px;
     }
-
+  
     .køb {
-        width: 90%;  /* Gør produktbokse endnu mindre */
+      width: 90%;
     }
-
+  
     .velkommen h1 {
-        font-size: 1.5em;
+      font-size: 1.5em;
     }
-
+  
     .velkommen p {
-        font-size: 0.9em; /* Mindre tekst på mobil */
+      font-size: 0.9em;
     }
-
+  
     .køb-plakat {
-        flex-direction: column;
-        padding: 10px;
+      flex-direction: column;
+      padding: 10px;
     }
-
+  
     .køb {
-        width: 100%; /* Fuldbredde for mobil */
+      width: 100%;
     }
-
+  
     .pris-box {
-        padding: 15px;
+      padding: 15px;
     }
-
-    /* Sørg for, at al tekst er læsbar på små skærme */
-    .pris-section h2, .medlem-priser h2, .gratis h2 {
-        font-size: 1rem;
+  
+    .gratis h2, .medlem-priser h2, .pris-section h2 {
+      font-size: 1rem;
     }
-
+  
     .dotted-line {
-        width: 100%; /* Gør linjen fuld bredde */
+      width: 100%;
     }
-}
-
-
-/* Mobil (maks. 600px) */
-@media (max-width: 600px) {
-    /* Ændre knappen, så den fylder bredden på mobilen */
-
-   
+  }
+  
+  @media (max-width: 600px) {
     .bliv-medlem {
-        width: 80%; 
-        padding: 12px 24px; 
-        font-size: 18px; 
+      width: 80%;
+      padding: 12px 24px;
+      font-size: 18px;
     }
-
-    /* Linjer justeres for at fylde mere */
+  
     .line {
-        width: 50%; 
-        margin: 10px 0; 
+      width: 50%;
+      margin: 10px 0;
     }
-
-    /* Containeren for knappen bliver centreret */
+  
     .medlemskab {
-        flex-direction: column; 
-        padding: 10px 0; 
+      flex-direction: column;
+      padding: 10px 0;
     }
-}
-
+  }
+  

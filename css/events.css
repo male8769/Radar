@@ -1,114 +1,165 @@
+/* Nulstilling af margin, padding og box-sizing for alle elementer */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Definerer farvevariabler */
 :root {
-    --primary-color: #052049; /* mørkeblå */
-    --secondary-color: #FF99CF; /* lysserød */
-    --accent-color: #633B90; /* lilla */
-    --text-color: #FF99CF; /* lysserød */
-    --hovor-color:#e377b1; /* mørk lysserød */
-    --pxfoto-color:#050f1f;/* mørk blå til 1px rundt om billeder */
+    --primary-color: #052049; /* Mørkeblå */
+    --secondary-color: #FF99CF; /* Lyserød */
+    --accent-color: #633B90; /* Lilla */
+    --text-color: #FF99CF; /* Lyserød */
+    --hovor-color: #e377b1; /* Mørk lyserød */
+    --pxfoto-color: #050f1f; /* Mørk blå til billeder */
 }
 
-/* tre billeder i toppen */
-
+/* BANNER SECTION */
 .img-banner {
-    display: flex; /* Gør containeren til en flexbox */
-    justify-content: center; /* Centrerer billederne */
-    align-items: center; /* Centrerer billederne lodret */
-    padding: 0; /* Ingen padding rundt om containeren */
-    gap: 0; /* Ingen mellemrum mellem billederne */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px;
+    gap: 70px;
+    background-color: var(--secondary-color);
+    padding-bottom: 20px;
 }
 
 .banner-img {
-    flex: 1; /* Gør hver figur lige bred */
-    margin: 0; /* Ingen margin mellem figurerne */
+    flex: 1;
 }
 
 .banner-img img {
-    width: 100%; /* Sørger for, at billederne fylder hele figurens bredde */
-    height: auto; /* Bevarer billedets proportioner */
-    display: block; /* Eliminerer evt. mellemrum som inline-elementer kan skabe */
-    border: 1px solid var(--pxfoto-color); /* Mørkeblå ramme */
-       
-    background-color: #1a1a1a; /* Mørk baggrundsfarve til at fremhæve rammen */
+    width: 100%;
+    height: auto;
+    border: 1px solid #e377b1;
+    background-color: #1a1a1a;
 }
 
-/* bliv medlem knap */
-
-/* Container for knappen og linjer */
+/* MEDLEMSKAB SECTION */
 .medlemskab {
-    display: flex; /* Flexbox til horisontal layout */
-    align-items: center; /* Vertikal centreret layout */
-    justify-content: center; /* Centrerer hele sektionen */
-    background-color: var(--secondary-color); /* Baggrundsfarve (lyserød) */
-    padding: 20px 0; /* Plads over og under */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    padding: 20px 0;
 }
 
-/* Hr styling */
 .line {
-    border: none; 
-    border-top: 4px dotted var(--primary-color); /* Stiplet linje */
-    margin: 0 10px; /* Plads mellem linjerne og knappen */
-    width: 25%; /* Procentuel bredde */
-    flex-shrink: 0; /* Sørger for, at linjerne ikke krymper */
+    border: none;
+    border-top: 4px dotted var(--primary-color);
+    margin: 0 10px;
+    width: 25%;
+    flex-shrink: 0;
     padding-top: 0;
 }
 
-/* Knappens styling */
 .bliv-medlem {
-    background-color: var(--primary-color); /* Mørkeblå baggrundsfarve */
-    color: var(--secondary-color); 
-    font-size: 16px; /* Tekststørrelse */
-    font-weight: bold; /* Fed tekst */
-    padding: 10px 20px; /* Indvendig afstand for knappen */
-    border: none; /* Fjern standardkant */
-    border-radius: 15px; /* Afrundede hjørner */
-    cursor: pointer; /* Gør knappen klikbar */
-    display: inline-block; /* Gør knappen inline-block for bedre fleksibilitet */
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    display: inline-block;
 }
 
 .bliv-medlem:hover {
-    background-color: #ff60b5; /* Skift farve ved hover */
-    color: #052049; /* Omvend farve ved hover */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Glidende overgang */
+    background-color: #ff60b5;
+    color: #052049;
+    transition: background-color .3s ease, color .3s ease;
 }
 
+/* Responsiv design for små skærme (max-width: 600px) */
+@media (max-width: 600px) {
+    .bliv-medlem {
+        width: 80%;
+        padding: 12px 24px;
+        font-size: 18px;
+    }
 
-/* Kalender */
+    .line {
+        width: 50%;
+        margin: 10px 0;
+    }
 
-.kalender-gitter, .ugedage {
+    .medlemskab {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+}
+
+/* Responsiv design for tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .img-banner {
+        flex-direction: row;
+        margin: 0;
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .banner-img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .bliv-medlem {
+        width: 60%;
+        padding: 14px 28px;
+        font-size: 18px;
+    }
+
+    .line {
+        width: 30%;
+    }
+}
+
+/* Responsiv design for desktop (min-width: 769px) */
+@media (min-width: 769px) {
+    .bliv-medlem {
+        width: auto;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .line {
+        width: 25%;
+        margin: 0 10px;
+    }
+}
+
+/* Kalendergitter */
+.kalender-gitter,
+.ugedage {
     display: grid;
-    grid-template-columns: repeat(7, 1fr); /* 7 kolonner til både ugedage og kalenderdage */
+    grid-template-columns: repeat(7, 1fr);
     gap: 6px;
     text-align: center;
     font-family: Arial, sans-serif;
 }
 
 .ugedage {
-    margin-bottom: 10px; /* Afstand til dagene */
+    margin-bottom: 10px;
     text-align: center;
 }
 
 .ugedag {
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 700;
     color: var(--text-color);
     background-color: var(--primary-color);
     padding: 10px;
     border-radius: 5px;
 }
 
-/* Kalenderdage */
-
 .kalender {
     background-color: var(--primary-color);
-    border: none; /* Fjern border hvis der er en utilsigtet */
-    padding: 0; /* Sørg for at der ikke er nogen ekstra padding */
-    margin: 0; /* Fjern margin */
+    border: none;
+    padding: 0;
+    margin: 0;
 }
 
 .dag {
@@ -124,10 +175,11 @@
     color: var(--text-color);
     margin-bottom: 20px;
     font-size: 1.2em;
-    font-weight: bold;
+    font-weight: 700;
     font-family: Arial, sans-serif;
 }
 
+/* Begivenhedssektion */
 .begivenheder {
     max-width: 800px;
     margin: 0 auto;
@@ -140,7 +192,7 @@
 .begivenheder h1 {
     font-family: Arial, sans-serif;
     font-size: 2em;
-    font-weight: bold;
+    font-weight: 700;
     text-align: center;
     color: var(--text-color);
     margin-bottom: 20px;
@@ -159,7 +211,7 @@
     padding: 10px;
     background-color: var(--accent-color);
     border-radius: 5px;
-    color: white;
+    color: #fff;
 }
 
 .dag:hover {
@@ -186,10 +238,10 @@
     left: 50%;
     transform: translateX(-50%);
     background-color: #003060;
-    color: white;
+    color: #fff;
     padding: 10px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
     z-index: 10;
     width: 150px;
     cursor: pointer;
@@ -199,12 +251,11 @@
     display: block;
 }
 
-/* Om kalender tekst */
-
+/* Om kalender sektionen */
 .om-kalender {
     background-color: var(--primary-color);
     color: var(--text-color);
-    text-align: center; 
+    text-align: center;
     line-height: 1.6;
     font-size: 1em;
     font-family: Arial, sans-serif;
@@ -213,50 +264,48 @@
 
 .om-kalender h3 {
     font-size: 1.5em;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .om-kalender p {
     font-size: 1.2em;
     max-width: 700px;
-    text-align: center; 
+    text-align: center;
     margin: 0 auto;
 }
 
-
-/* billeder af koncerter/tegninger */
-
+/* Koncert-sektion */
 .koncerter {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tre kolonner */
-    gap: 40px; /* Mellemrum mellem billeder */
-    background-color: var(--accent-color); /* Mørk blå baggrund */
-    padding: 40px; /* Indre margin omkring hele sektionen */
-    border: 40px solid var(--primary-color); /* Ramme omkring sektionen */
-  }
-  
-  .koncert-img {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    background-color: var(--accent-color);
+    padding: 40px;
+    border: 40px solid var(--primary-color);
+}
+
+.koncert-img {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .koncert-img img {
-    max-width: 100%; 
+}
+
+.koncert-img img {
+    max-width: 100%;
     height: auto;
     border: 1px solid var(--pxfoto-color);
-    border-radius: 5px; 
+    border-radius: 5px;
     padding: 0;
-  }
-  
+}
+
+/* Responsiv design for små skærme */
 @media (max-width: 600px) {
-    /* Fjern margin og padding på body og html */
-    html, body {
+    body, html {
         margin: 0;
         padding: 0;
         width: 100%;
         height: 100%;
-        overflow-x: hidden; /* Hindrer horisontal scroll */
+        overflow-x: hidden;
     }
 
     .begivenheder {
@@ -272,7 +321,7 @@
         width: 100%;
         height: auto;
         box-sizing: border-box;
-        overflow: hidden; /* Hindrer overskydende indhold */
+        overflow: hidden;
     }
 
     .kalender-gitter {
@@ -306,21 +355,20 @@
     }
 }
 
-
-/* Tablet (max-width: 768px) */
+/* Responsiv design for tablets */
 @media (max-width: 768px) {
     .koncerter {
-        grid-template-columns: repeat(2, 1fr); /* To kolonner */
-        gap: 30px; /* Mindre mellemrum */
-        padding: 30px; /* Mindre padding */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        padding: 30px;
     }
 }
 
-/* Mobil (max-width: 480px) */
+/* Responsiv design for meget små skærme */
 @media (max-width: 480px) {
     .koncerter {
-        grid-template-columns: 1fr; /* En kolonne */
-        gap: 20px; /* Mindre mellemrum */
-        padding: 20px; /* Mindre padding */
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
     }
 }
